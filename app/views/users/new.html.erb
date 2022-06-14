@@ -1,0 +1,39 @@
+
+<div class="area" >
+<ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+
+<div class="container"><br>
+<%= form_with model: @user do |f| %>
+<div class="form__group field">
+<p>
+<%= f.text_field :name, class: "form__field", placeholder: "name", id: "name"%>
+<%= f.label :name, class: "form__label", for: "name"%>
+</p>
+</div>
+<div class="form__group field">
+<p>
+<%= f.text_field :password, class: "form__field", placeholder: :password, id: "password", type: "password"%>
+<%= f.label :password, class: "form__label", for: "password"%>
+</p>
+</div><br>
+<div class="form__group_2">
+<p>
+<%= f.button 'Ingresar', class: "offset", type: "submit"%>
+</p>
+</div>
+<% end %>
+</div>
+
+            
+</div >

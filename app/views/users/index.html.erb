@@ -1,0 +1,46 @@
+<div class="area" >
+<ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+            
+<div class="container-2">
+<div class="form__group field">
+
+<h1>Usuarios</h1>
+
+<h4><%= link_to 'Nuevo usuario', new_user_path %></h4>
+</div>
+<div class="form__group field">
+<div class="center">
+<table class="table-fill">
+  <tr>
+    <center><th>Nombre</th></center>
+    <center><th>Contraseña</th></center>
+    <center><th colspan="3">Opciones</th></center>
+  </tr>
+ 
+  <% @users.each do |u| %>
+    <tr>
+      <td><%= u.name %></td>
+      <td><%= u.password %></td>
+      <td><%= link_to 'Ver', user_path(u) %></td>
+      <td><%= link_to 'Editar', edit_user_path(u) %></td>
+      <td><%= link_to 'Destroy', user_path(u),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</div>
+</table></div><br>
+</div>
+
+
